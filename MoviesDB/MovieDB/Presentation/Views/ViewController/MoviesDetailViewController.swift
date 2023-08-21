@@ -30,7 +30,7 @@ class MoviesDetailViewController: UIViewController {
         self.title = modal?.title
         header.text = modal?.title
         subtitle.text = modal?.title
-        rating.text = "\(modal?.voteAverage)"
+        rating.text = "\(String(describing: modal?.voteAverage))"
         overview.text = modal?.overview
         poster.loadRemoteImageFrom(urlString: "\(Configuration.originalImageUrl)\(modal?.poster ?? "")")
 

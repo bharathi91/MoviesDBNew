@@ -44,7 +44,7 @@ func testEnterTextInSearchBar() {
        
         let movie:[String:Any] = moviesList[counter] as! [String : Any]
         let movieTitle = (movie["poster_path"] as? String)!
-        let cell = app.tables["tableview"].cells.staticTexts[movieTitle].firstMatch.tap()
+        let cell: Void = app.tables["tableview"].cells.staticTexts[movieTitle].firstMatch.tap()
         sleep(2)
         app.navigationBars.buttons.element(boundBy: 0).tap()
         checkCounter()

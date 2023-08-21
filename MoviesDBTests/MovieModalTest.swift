@@ -17,11 +17,8 @@ final class MovieModalTest: XCTestCase {
                     print("JSON: \(json)")
                      if let array = json["results"] as? NSArray {
                          do {
-                             let job = try Movie(dictionary: array[0] as! [String : Any])
-                             print(job.title)
-                             print(job.poster)
-                             print(job.releaseDate)
-                                XCTAssertTrue(job != nil)
+                             let movie = try Movie(dictionary: array[0] as! [String : Any])
+                             XCTAssertTrue(movie.poster != nil)
                          } catch {
                              print(error)
                          }

@@ -21,7 +21,7 @@ final class MoviesDBTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     func testVCRouter() {
-        MoviesDBRouter.routeToMovieList()
+        _ = MoviesDBRouter.routeToMovieList()
         if ((UIApplication.topViewController()?.isKind(of: MoviesListViewController.self)) != nil)  {
             XCTAssert(true)
         }

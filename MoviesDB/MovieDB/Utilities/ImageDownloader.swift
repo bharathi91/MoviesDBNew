@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
-let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
 public extension UIImageView {
     func loadRemoteImageFrom(urlString: String,placeHolderImageURL:String = "https://via.placeholder.com/300/000000/FFFFFF/?text=Image%20Not%20Found"){
     let url = URL(string: urlString)

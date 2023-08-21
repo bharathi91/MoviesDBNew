@@ -173,6 +173,15 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		6A159CCD2A9345CA00EC1203 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6AB324C52A8F5B9000671D42 /* ViewModal */,
+				6A4E7E692A8C8C7D003CF7C8 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		6A4E7E032A8BC004003CF7C8 = {
 			isa = PBXGroup;
 			children = (
@@ -327,8 +336,7 @@
 			children = (
 				6A159CCC2A9234ED00EC1203 /* Module */,
 				6AB324C72A8F5CBC00671D42 /* MovieRouter */,
-				6AB324C52A8F5B9000671D42 /* ViewModal */,
-				6A4E7E692A8C8C7D003CF7C8 /* Views */,
+				6A159CCD2A9345CA00EC1203 /* Presentation */,
 				6AB324CE2A8F5FEE00671D42 /* Data */,
 				6AB324BC2A8F583B00671D42 /* Usecase */,
 				6A4E7E6B2A8C8CD7003CF7C8 /* Modal */,

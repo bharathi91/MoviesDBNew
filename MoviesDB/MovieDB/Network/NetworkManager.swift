@@ -33,14 +33,14 @@ class NetworkManager: NSObject, INetworkManager {
     }
     
     func request<T: Decodable>(searchString: String,request: INetworkRequest, completion: @escaping Response<T>) {
-        var request1 = request
+        let request1 = request
         //request1.bodyParamaters = ["api_key": "c8cf4b259fb6aed1e8562a005b7f6d8c"]
-        guard var urlRequest = try? requestGenerator.createURLRequest(serachString: searchString, using: request1) else {
+        guard let urlRequest = try? requestGenerator.createURLRequest(serachString: searchString, using: request1) else {
             return completion(.failure(NetworkError.invalidRequest))
         }
         
         let task = session.dataTask(with: urlRequest) { data, response, error in
-            let str = String(decoding: data!, as: UTF8.self)
+            _ = String(decoding: data!, as: UTF8.self)
             do {
                 if let jsonArray = try JSONSerialization.jsonObject(with: data!, options : .mutableContainers) as? [Dictionary<String,Any>]
                 {
@@ -68,7 +68,7 @@ class NetworkManager: NSObject, INetworkManager {
             }
             
             do {
-                let str = String(decoding: data, as: UTF8.self)
+                _ = String(decoding: data, as: UTF8.self)
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decodedData))
             } catch {

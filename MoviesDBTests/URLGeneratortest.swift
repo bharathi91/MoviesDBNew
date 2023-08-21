@@ -11,7 +11,7 @@ import XCTest
 final class URLGeneratortest: XCTestCase {
     func testMovieDetailsList() {
       let URLRequestGenerator = URLRequestGenerator()
-        var request = NetworkRequest(path: "", method: .get)
+        let request = NetworkRequest(path: "", method: .get)
         do {
             let urlrequest = try URLRequestGenerator.createURLRequest(serachString: "Joker", using:request)
             XCTAssertTrue(((urlrequest.url?.absoluteString.contains("Joker")) != nil))
